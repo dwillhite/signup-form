@@ -1,5 +1,64 @@
 @import './base/reset';
+@import './variables/colors';
+
+body {
+  font-family: 'Questrial', sans-serif;
+}
 
 h1 {
-  color: blue;
+  color: green;
 }
+
+// Form
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  background: $blue;
+  margin: 1em;
+  padding: 2em 0;
+  border-radius: 15px 15px;
+ @media only screen and (min-width: 44em) {
+  width: 50%;
+ }
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  label {
+    width: 100%;
+    color: $truewhite;
+    font-size: 1.75em;
+  }
+  input {
+    width: 100%;
+    font-size: 1.75em;
+    margin-bottom: 1em;
+  }
+}
+
+.error-message {
+  color:$red; 
+}
+

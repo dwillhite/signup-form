@@ -79,7 +79,7 @@ const copyFiles = function (done) {
   done();
 
 	// Copy static files
-	return src('src/**/*')
+	return src('src/*')
     .pipe(dest('dist/'));
    
     
@@ -113,7 +113,7 @@ const startServer = function(done) {
   //browsersync
   browserSync.init({
     server: {
-      baseDir: './dist/'
+      baseDir: 'dist/'
     }
   });
   done();
@@ -127,7 +127,7 @@ const reloadBrowser = function(done){
 
 //watch for changes
 const watchSrc = function(done) {
-  watch('/src', series(exports.default, reloadBrowser));
+  watch('src/', series(exports.default, reloadBrowser));
   done();
 }
 
